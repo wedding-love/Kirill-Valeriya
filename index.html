@@ -214,9 +214,14 @@ input[type="radio"]{width:18px;height:18px;margin-top:0;margin-right:8px;accent-
 .contacts-item a:hover{text-decoration:underline;}
 .contacts-divider{width:30px;height:1px;background:#ddd;margin:4px 0;}
 
-/* выделение даты - тот же шрифт, чуть жирнее */
+/* выделение даты - жирнее и отдельной строкой */
 .highlight-date{
+    display:block;
     font-weight:700;
+    font-size:18px;
+    margin-top:8px;
+    color:var(--accent);
+    letter-spacing:1px;
 }
 
 @media(min-width:768px){.wrapper{max-width:700px;}}
@@ -343,7 +348,9 @@ input[type="radio"]{width:18px;height:18px;margin-top:0;margin-right:8px;accent-
 <!-- RSVP - ОБНОВЛЁННАЯ АНКЕТА -->
 <div class="section">
 <div class="script">Анкета гостя</div>
-<div class="text">Пожалуйста, подтвердите ваше присутствие <span class="highlight-date">до 9 августа</span>. Нам важно знать ваши предпочтения и комфорт.</div>
+<div class="text" style="margin-bottom:5px;">Пожалуйста, подтвердите ваше присутствие</div>
+<div class="highlight-date">до 9 августа</div>
+<div class="text" style="margin-top:15px;">Нам важно знать ваши предпочтения и комфорт.</div>
 
 <form action="https://formspree.io/f/xaqzzoog" method="POST">
 <input type="text" name="name" placeholder="Ваше имя" required>
