@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -215,6 +214,14 @@ input[type="radio"]{width:18px;height:18px;margin-top:0;margin-right:8px;accent-
 .contacts-item a:hover{text-decoration:underline;}
 .contacts-divider{width:30px;height:1px;background:#ddd;margin:4px 0;}
 
+/* выделение даты */
+.highlight-date{
+    color:var(--accent);
+    font-weight:600;
+    font-size:18px;
+    letter-spacing:1px;
+}
+
 @media(min-width:768px){.wrapper{max-width:700px;}}
 @media(min-width:1024px){.wrapper{max-width:900px;}.photo{width:60%;}}
 </style>
@@ -325,23 +332,21 @@ input[type="radio"]{width:18px;height:18px;margin-top:0;margin-right:8px;accent-
 </div>
 </div>
 
-<!-- GIFT BLOCK -->
+<!-- GIFT BLOCK - СОКРАЩЁННЫЙ -->
 <div class="section">
 <div class="script">Пожелания</div>
 <div class="gift-block">
-<div class="text">Дорогие наши! Мы бесконечно ценим ваше внимание, заботу и то тепло, которое вы принесёте с собой в этот день.</div>
+<div class="text">Дорогие друзья! Мы бесконечно ценим ваше внимание, заботу и то тепло, которое вы принесёте с собой в этот день.</div>
 <div class="text">Ваше присутствие на нашей свадьбе — это главный подарок, который мы можем получить. Мы не хотим, чтобы вы тратили время, нервы и силы на поиски презентов.</div>
-<div class="text">Для нас важно, чтобы вы просто были счастливы в этот день рядом с нами.</div>
 <div class="text">Если вы хотите порадовать нас, мы будем безмерно благодарны за конверты с вашими тёплыми словами и пожеланиями. Это станет нашим общим вкладом в семейный бюджет — в наш дом, в наши мечты и в наше совместное будущее.</div>
 <div class="text">Мы обожаем цветы, но, к сожалению, не сможем ими насладиться в полной мере, ведь сразу после свадьбы мы отправимся в наше долгожданное путешествие. Чтобы красота не пропадала зря, мы предлагаем вместо традиционного букета подарить нам бутылочку вашего любимого алкогольного напитка. Мы обязательно откроем его на нашу первую годовщину, соберёмся снова и за бокалом вспомним этот счастливейший день.</div>
 </div>
 </div>
 
-<!-- RSVP -->
+<!-- RSVP - ОБНОВЛЁННАЯ АНКЕТА -->
 <div class="section">
 <div class="script">Анкета гостя</div>
-<div class="text">Пожалуйста, подтвердите ваше присутствие заранее. Нам важно знать ваши предпочтения и комфорт.</div>
-<div class="text" style="font-size:14px;color:#888;margin-top:5px;">Подтвердите Ваше присутствие до 9 августа</div>
+<div class="text">Пожалуйста, подтвердите ваше присутствие <span class="highlight-date">до 9 августа</span>. Нам важно знать ваши предпочтения и комфорт.</div>
 
 <form action="https://formspree.io/f/xaqzzoog" method="POST">
 <input type="text" name="name" placeholder="Ваше имя" required>
@@ -362,6 +367,7 @@ input[type="radio"]{width:18px;height:18px;margin-top:0;margin-right:8px;accent-
 <label><input type="checkbox" name="drink_whiskey" value="whiskey"> Виски</label>
 <label><input type="checkbox" name="drink_vodka" value="vodka"> Водка</label>
 <label><input type="checkbox" name="drink_champagne" value="champagne"> Шампанское</label>
+<label><input type="checkbox" name="drink_none" value="none"> Не пью алкоголь</label>
 </div>
 </div>
 
@@ -398,4 +404,3 @@ sections.forEach(sec=>observer.observe(sec));
 
 </body>
 </html>
-
