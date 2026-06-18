@@ -214,11 +214,34 @@ input[type="radio"]{width:18px;height:18px;margin-top:0;margin-right:8px;accent-
 .contacts-item a:hover{text-decoration:underline;}
 .contacts-divider{width:30px;height:1px;background:#ddd;margin:4px 0;}
 
-/* выделение даты - максимально жирное + дополнительный акцент */
+/* КРАСИВОЕ ВЫДЕЛЕНИЕ ДАТЫ - отдельная строка */
+.date-block{
+    margin: 12px 0 8px 0;
+    padding: 8px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.date-block::before,
+.date-block::after{
+    content: "";
+    flex: 1;
+    max-width: 60px;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.3;
+}
+
 .highlight-date{
-    font-weight:900;
-    font-family:'Cormorant', serif;
-    letter-spacing:0.5px;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 2px;
+    padding: 0 8px;
 }
 
 @media(min-width:768px){.wrapper{max-width:700px;}}
@@ -342,10 +365,17 @@ input[type="radio"]{width:18px;height:18px;margin-top:0;margin-right:8px;accent-
 </div>
 </div>
 
-<!-- RSVP - ОБНОВЛЁННАЯ АНКЕТА -->
+<!-- RSVP - С КРАСИВЫМ ВЫДЕЛЕНИЕМ ДАТЫ -->
 <div class="section">
 <div class="script">Анкета гостя</div>
-<div class="text">Пожалуйста, подтвердите ваше присутствие <span class="highlight-date">до 9 августа</span>. Нам важно знать ваши предпочтения и комфорт.</div>
+<div class="text" style="margin-bottom:0;">Пожалуйста, подтвердите ваше присутствие</div>
+
+<!-- ДАТА ОТДЕЛЬНОЙ СТРОКОЙ С ДЕКОРОМ -->
+<div class="date-block">
+    <span class="highlight-date">до 9 августа</span>
+</div>
+
+<div class="text" style="margin-top:0;">Нам важно знать ваши предпочтения и комфорт.</div>
 
 <form action="https://formspree.io/f/xaqzzoog" method="POST">
 <input type="text" name="name" placeholder="Ваше имя" required>
